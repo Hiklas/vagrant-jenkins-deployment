@@ -12,4 +12,8 @@ Start VM using this
 vagrant up
 ```
 
+## Background
 
+### Jenkins
+
+There are instructions and links to the RPM repository and packages available, [here](https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Red+Hat+distributions)

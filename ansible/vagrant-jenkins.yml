@@ -1,0 +1,10 @@
+---
+- hosts: default
+  vars:
+  tasks:
+    - include: jenkins-server.yml
+  handlers:
+    - include: jenkins-handlers.yml
+
+
+    
