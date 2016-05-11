@@ -1,6 +1,9 @@
 ---
 - hosts: default
+  sudo: yes
   vars:
+    jenkins_rpm_key_dest: /etc/pki/rpm-gpg/jenkins-ci.org.key
+    nginx_rpm_key_dest: /etc/pki/rpm-gpg/nginx.key 
   tasks:
     - include: jenkins-server.yml
   handlers:
