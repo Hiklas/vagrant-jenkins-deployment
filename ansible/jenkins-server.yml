@@ -32,12 +32,17 @@
 
    - name: Enable and start firewalld
      service: name=firewalld enabled=yes state=restarted
-   
+  
    - name: Enable firewall services for HTTP(S) permanently
      firewalld: service={{ item }} permanent=true immediate=true state=enabled
      with_items:
        - http
        - https
+
+   - name: Enable firewall for ports
+     firewalld: port={{ item }}/tcp permanent=true immediate=true state=enabled
+     with_items:
+       - 8080
 
    - name: Enable and start nginx
      service: name=nginx enabled=yes state=restarted

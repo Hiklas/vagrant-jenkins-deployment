@@ -2,6 +2,12 @@
 
 Intended as an environment to play with Jenkins for apprentices and trainees to work on.
 
+## Quickstart
+
+* Install ansible
+* Run vagrant up
+* Connect to http://localhost:9001/ on the host 
+
 ## Setup
 
 ### Pre-requisites

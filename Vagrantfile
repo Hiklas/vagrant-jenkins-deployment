@@ -25,7 +25,7 @@
 Vagrant.configure(2) do |config|
   config.vm.box = "centos/7"
 
-  config.vm.network "forwarded_port", guest: 80, host: 9001
+  config.vm.network "forwarded_port", guest: 8080, host: 9001
   # config.vm.network "private_network", ip: "192.168.33.10"
   # config.vm.network "public_network"
   # config.vm.synced_folder "../data", "/vagrant_data"
@@ -38,7 +38,7 @@ Vagrant.configure(2) do |config|
   end
 
   config.vm.provision "ansible" do |ansible|
-    ansible.verbose = "vvv"
+    ansible.verbose = "v"
     ansible.playbook = "ansible/vagrant-jenkins.yml"
   end
 end
