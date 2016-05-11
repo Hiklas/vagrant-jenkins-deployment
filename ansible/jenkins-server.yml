@@ -19,6 +19,10 @@
    - name: Install packages
      yum: name={{ item }} state=present
      with_items:
+       - net-tools
+       - maven
+       - java-1.8.0-openjdk
+       - firewalld
        - git
        - nginx
        - jenkins
@@ -26,6 +30,9 @@
    - name: Copy nginx config 
      template: src=./nginx/default.conf dest=/etc/nginx/conf.d/default.conf 
 
+   - name: Enable and start firewalld
+     service: name=firewalld enabled=yes state=restarted
+   
    - name: Enable firewall services for HTTP(S) permanently
      firewalld: service={{ item }} permanent=true immediate=true state=enabled
      with_items:
