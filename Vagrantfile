@@ -1,6 +1,6 @@
 #
 #
-#    Vagrant node developemnt environment
+#    Vagrant jenkins deployment environment
 #    Copyright (C) 2016 Hiklas Ltd (Katie and Fiona Bianchi)
 #
 #    This program is free software: you can redistribute it and/or modify
